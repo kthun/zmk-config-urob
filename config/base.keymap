@@ -45,7 +45,7 @@ ISSUES, WORKAROUNDS and a "ZMK-WISHLIST"
 #define UC 5
 
 #include "combos.dtsi"  // source after layer shortcuts
-#include "mouse.dtsi"
+// #include "mouse.dtsi"
 
 // sticky key config
 &sk {
@@ -110,7 +110,6 @@ ZMK_BEHAVIOR(ss_cw, tap_dance,
 ZMK_BEHAVIOR(bs_del_num, mod_morph,
     bindings = <&lt NUM BSPC>, <&kp DEL>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
-    masked_mods = <MOD_LSFT>;  // requires PR #1114
 )
 
 // Windows sleep key
