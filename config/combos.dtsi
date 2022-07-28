@@ -33,8 +33,8 @@ ZMK_COMBO(rpar,  &kp RPAR,      RM2 RM3, DEF NUM)
 ZMK_COMBO(lbrk,  &kp LBKT,      RB1 RB2, DEF NUM)
 ZMK_COMBO(rbrk,  &kp RBKT,      RB2 RB3, DEF NUM)
 
-// #undef COMBO_TERM
-// #define COMBO_TERM 50
+#undef COMBO_TERM
+#define COMBO_TERM 50
 
 /* Other symbols (vertical combos) */
 ZMK_COMBO(at,    &kp AT,        LT3 LM3, DEF NUM)
