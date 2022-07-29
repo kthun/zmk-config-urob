@@ -7,63 +7,57 @@
   ╰───────╮ LH2 LH1 LH0 │ │ RH0 RH1 RH2 ╭───────╯
           ╰─────────────╯ ╰─────────────╯ */
 
-#include ""
-#define ZMK_COMBO(name, combo_bindings, keypos, combo_layers) \
+#include "keypos_def/keypos_48keys_wide.h"
+#define ZMK_COMBO(name, combo_bindings, keypos, combo_term) \
     / { \
         combos { \
             compatible = "zmk,combos"; \
             combo_ ## name { \
-                timeout-ms = <COMBO_TERM>; \
-                bindings = <combo_bindings>; \
                 key-positions = <keypos>; \
-                layers = <combo_layers>; \
+                bindings = <combo_bindings>; \
+                timeout-ms = <combo_term>; \
+                layers = <0>; \
             }; \
         }; \
     };
 
-#define COMBO_TERM 30
-
 /* Punctuation (horizontal left hand) */
-ZMK_COMBO(num,   &tog NUM,      LT3 LT1, 0)
-ZMK_COMBO(all,   &kp LC(A),     LT3 LT2, 0)
-ZMK_COMBO(app,   &kp LG(SPACE), LT2 LT1, 0)
+ZMK_COMBO(all,   &kp LC(A),     LT3 LT2, 30)  // 30ms combo term
+ZMK_COMBO(app,   &kp LG(SPACE), LT2 LT1, 30)
 
-ZMK_COMBO(excl,  &kp EXCL,      LM3 LM2, 0)
-ZMK_COMBO(qmark, &kp QMARK,     LM2 LM1, 0)
+ZMK_COMBO(excl,  &kp EXCL,      LM3 LM2, 30)
+ZMK_COMBO(qmark, &kp QMARK,     LM2 LM1, 30)
 
-ZMK_COMBO(cut,   &kp LC(X),     LB3 LB1, 0)
-ZMK_COMBO(copy,  &kp LC(INS),   LB3 LB2, 0)
-ZMK_COMBO(paste, &kp LS(INS),   LB2 LB1, 0)
+ZMK_COMBO(cut,   &kp LC(X),     LB3 LB1, 30)
+ZMK_COMBO(copy,  &kp LC(INS),   LB3 LB2, 30)
+ZMK_COMBO(paste, &kp LS(INS),   LB2 LB1, 30)
 
 /* Brackets (horizontal right hand) */
-ZMK_COMBO(lbrc,  &kp LBRC,      RT1 RT2, 0)
-ZMK_COMBO(rbrc,  &kp RBRC,      RT2 RT3, 0)
-ZMK_COMBO(lpar,  &kp LPAR,      RM1 RM2, 0)
-ZMK_COMBO(rpar,  &kp RPAR,      RM2 RM3, 0)
-ZMK_COMBO(lbrk,  &kp LBKT,      RB1 RB2, 0)
-ZMK_COMBO(rbrk,  &kp RBKT,      RB2 RB3, 0)
-
-#undef COMBO_TERM
-#define COMBO_TERM 50
+ZMK_COMBO(lbrc,  &kp LBRC,      RT1 RT2, 30)
+ZMK_COMBO(rbrc,  &kp RBRC,      RT2 RT3, 30)
+ZMK_COMBO(lpar,  &kp LPAR,      RM1 RM2, 30)
+ZMK_COMBO(rpar,  &kp RPAR,      RM2 RM3, 30)
+ZMK_COMBO(lbrk,  &kp LBKT,      RB1 RB2, 30)
+ZMK_COMBO(rbrk,  &kp RBKT,      RB2 RB3, 30)
 
 /* Other symbols (vertical combos) */
-ZMK_COMBO(at,    &kp AT,        LT3 LM3, 0)
-ZMK_COMBO(hash,  &kp HASH,      LT2 LM2, 0)
-ZMK_COMBO(dllr,  &kp DLLR,      LT1 LM1, 0)
-ZMK_COMBO(prcnt, &kp PRCNT,     LT0 LM0, 0)
+ZMK_COMBO(at,    &kp AT,        LT3 LM3, 50)  // 50ms combo term
+ZMK_COMBO(hash,  &kp HASH,      LT2 LM2, 50)
+ZMK_COMBO(dllr,  &kp DLLR,      LT1 LM1, 50)
+ZMK_COMBO(prcnt, &kp PRCNT,     LT0 LM0, 50)
 
-ZMK_COMBO(caret, &kp CARET,     RT0 RM0, 0)
-ZMK_COMBO(plus,  &kp PLUS,      RT1 RM1, 0)
-ZMK_COMBO(star,  &kp STAR,      RT2 RM2, 0)
-ZMK_COMBO(amps,  &kp AMPS,      RT3 RM3, 0)
+ZMK_COMBO(caret, &kp CARET,     RT0 RM0, 50)
+ZMK_COMBO(plus,  &kp PLUS,      RT1 RM1, 50)
+ZMK_COMBO(star,  &kp STAR,      RT2 RM2, 50)
+ZMK_COMBO(amps,  &kp AMPS,      RT3 RM3, 50)
 
-ZMK_COMBO(grave, &kp GRAVE,     LM3 LB3, 0)
-ZMK_COMBO(bslh,  &kp BSLH,      LM2 LB2, 0)
-ZMK_COMBO(tilde, &kp TILDE,     LM1 LB1, 0)
-ZMK_COMBO(equal, &kp EQUAL,     LM0 LB0, 0)
+ZMK_COMBO(grave, &kp GRAVE,     LM3 LB3, 50)
+ZMK_COMBO(bslh,  &kp BSLH,      LM2 LB2, 50)
+ZMK_COMBO(tilde, &kp TILDE,     LM1 LB1, 50)
+ZMK_COMBO(equal, &kp EQUAL,     LM0 LB0, 50)
 
-ZMK_COMBO(under, &kp UNDER,     RM0 RB0, 0)
-ZMK_COMBO(minus, &kp MINUS,     RM1 RB1, 0)
-ZMK_COMBO(fslh,  &kp FSLH,      RM2 RB2, 0)
-ZMK_COMBO(pipe,  &kp PIPE,      RM3 RB3, 0)
+ZMK_COMBO(under, &kp UNDER,     RM0 RB0, 50)
+ZMK_COMBO(minus, &kp MINUS,     RM1 RB1, 50)
+ZMK_COMBO(fslh,  &kp FSLH,      RM2 RB2, 50)
+ZMK_COMBO(pipe,  &kp PIPE,      RM3 RB3, 50)
 

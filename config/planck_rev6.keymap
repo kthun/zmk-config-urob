@@ -1,7 +1,25 @@
-/* source keypos definitions */
-#include "../zmk-nodefree-config/keypos_def/keypos_48keys_wide.h"
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
 
+#include "combos.dtsi"          // overlapping combos are defined here
+#define EXTRA_KEYS &none &none  // set to empty for 36keys layout
 
-/* source the main keymap */
-#include "base.keymap"
+/ {
+    keymap {
+        compatible = "zmk,keymap";
 
+        default_layer {
+            bindings = <
+     // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
+          &kp Q         &kp W         &kp F         &kp P         &kp B             EXTRA_KEYS         &kp J         &kp L         &kp U         &kp Y         &kp SQT
+     // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+          &mt LGUI A    &mt LALT R    &mt LCTRL S   &mt LSHFT T   &kp G             EXTRA_KEYS         &kp M         &mt RSHFT N   &mt LCTRL E   &mt LALT I    &mt LGUI O
+     // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+          &kp Z         &kp X         &kp C         &kp D         &kp V             EXTRA_KEYS         &kp K         &kp H         &kp COMMA     &kp DOT       &kp SEMI
+     // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+          EXTRA_KEYS                  &kp ESC       &kp SPACE     &kp TAB           EXTRA_KEYS         &kp RET       &kp LSHFT     &kp BSPC                    EXTRA_KEYS
+     // ╰─────────────╯             ╰─────────────┴──── ────────┴─────────────╯   ╰─────────────╯   ╰─────────────┴─────────────┴─────────────╯             ╰─────────────╯
+            >;
+        };
+    };
+};
