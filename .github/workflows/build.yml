@@ -2,4 +2,4 @@ on: [push, pull_request, workflow_dispatch]
 
 jobs:
   build:
-    uses: urob/zmk-config/.github/workflows/build-user-config.yml@experimental
+    uses: urob/zmk/.github/workflows/build-user-config.yml@build-with-submodules
