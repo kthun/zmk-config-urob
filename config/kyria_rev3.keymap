@@ -1,0 +1,3 @@
+#include "../zmk-nodefree-config/keypos_def/keypos_50keys.h"
+
+#include "base.keymap"
