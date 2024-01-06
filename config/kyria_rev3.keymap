@@ -22,13 +22,6 @@
 #define UC 5
 #define MOUSE 6
 
-#include "combos.dtsi"  // requires layer aliases
-#include "mouse.dtsi"
-#include "extra_keys_kyria_rev3.h"
-
-#define XXX &none
-#define ___ &trans
-
 /* Extra keys */
 #define LT5 XXX
 #define LM5 XXX
@@ -38,15 +31,31 @@
 #define LH2 XXX
 #define LF1 XXX
 #define LF0 XXX
-#define RF0 XXX
-#define RF1 XXX
 #define RT5 XXX
 #define RM5 XXX
 #define RB5 XXX
+#define RF0 XXX
+#define RF1 XXX
 #define RH4 XXX
 #define RH3 XXX
 #define RH2 XXX
 
+#define X_LT LT5
+#define X_LM LM5
+#define X_LB LB5
+#define X_LH LH4 LH3 LH2
+#define X_RT RT5
+#define X_RM RM5
+#define X_RB RB5
+#define X_RH RH2 RH3 RH4
+#define X_MB LF1 LF0 RF0 RF1
+
+#include "combos.dtsi"  // requires layer aliases
+#include "mouse.dtsi"
+#include "extra_keys.h"
+
+#define XXX &none
+#define ___ &trans
 
 /* Global settings */
 
