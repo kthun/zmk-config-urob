@@ -23,23 +23,6 @@
 #define MOUSE 6
 
 /* Extra keys */
-#define LT5 XXX
-#define LM5 XXX
-#define LB5 XXX
-#define LH4 XXX
-#define LH3 XXX
-#define LH2 XXX
-#define LF1 XXX
-#define LF0 XXX
-#define RT5 XXX
-#define RM5 XXX
-#define RB5 XXX
-#define RF0 XXX
-#define RF1 XXX
-#define RH4 XXX
-#define RH3 XXX
-#define RH2 XXX
-
 #define X_LT LT5
 #define X_LM LM5
 #define X_LB LB5
