@@ -245,7 +245,10 @@ ZMK_BEHAVIOR(win_sleep, macro,
 /*
 ZMK_CONDITIONAL_LAYER(FN NUM, SYS)  // FN + NUM --> SYS
 */
-ZMK_COMBO(fslh,  &kp FSLH,      LM2 LB2,     DEF NAV NUM, 30)
+ZMK_COMBO(c1,  &kp FSLH,      LM1 LB1,     DEF NAV NUM, 30)
+ZMK_COMBO(c2,  &kp FSLH,      LM2 LB2,     DEF NAV NUM, 30)
+ZMK_COMBO(c3,  &kp FSLH,      LM3 LB3,     DEF NAV NUM, 30)
+ZMK_COMBO(c4,  &kp FSLH,      LM4 LB4,     DEF NAV NUM, 30)
 
 ZMK_LAYER(base,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
