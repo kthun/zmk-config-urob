@@ -33,7 +33,7 @@
 #define X_RH ___ ___ ___
 #define X_MB ___ ___ ___ ___
 
-/*#include "combos.dtsi"  // requires layer aliases*/
+#include "combos.dtsi"  // requires layer aliases
 #include "mouse.dtsi"
 #include "extra_keys.h"
 
@@ -242,17 +242,6 @@ ZMK_BEHAVIOR(win_sleep, macro,
 /* Keymap */
 
 ZMK_CONDITIONAL_LAYER(FN NUM, SYS)  // FN + NUM --> SYS
-
-#define COMBO_TERM_SLOW 50
-ZMK_COMBO(grave, &kp GRAVE,     LM3 LB3,     DEF NAV NUM, COMBO_TERM_SLOW)
-ZMK_COMBO(fslh,  &kp FSLH,      LM2 LB2,     DEF NAV NUM, COMBO_TERM_SLOW)
-ZMK_COMBO(equal, &kp EQUAL,     LM1 LB1,     DEF NAV NUM, COMBO_TERM_SLOW)
-ZMK_COMBO(tilde, &kp TILDE,     LM0 LB0,     DEF NAV NUM, COMBO_TERM_SLOW)
-
-ZMK_COMBO(rgrave, &kp GRAVE,     RM3 RB3,     DEF NAV NUM, COMBO_TERM_SLOW)
-ZMK_COMBO(rfslh,  &kp FSLH,      RM2 RB2,     DEF NAV NUM, COMBO_TERM_SLOW)
-ZMK_COMBO(requal, &kp EQUAL,     RM1 RB1,     DEF NAV NUM, COMBO_TERM_SLOW)
-ZMK_COMBO(rtilde, &kp TILDE,     RM0 RB0,     DEF NAV NUM, COMBO_TERM_SLOW)
 
 ZMK_LAYER(base,
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
