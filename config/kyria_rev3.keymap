@@ -119,7 +119,7 @@ MASK_MODS(masked_home, (MOD_LCTL), &kp HOME)
 MASK_MODS(masked_end,  (MOD_LCTL), &kp END)
 */
 /* Caps-word, num-word and smart-mouse */
-
+/*
 // tap: sticky-shift | shift + tap/ double-tap: caps-word | hold: shift
 ZMK_BEHAVIOR(smart_shft, mod_morph,
     bindings = <&sk LSHFT>, <&caps_word>;
@@ -152,9 +152,9 @@ ZMK_BEHAVIOR(smart_mouse, tri_state,
     ignored-key-positions = <LT1 LT3 RT1 RT2 RT3 RM1 RM2 RM3 RH0 RH1>;
     ignored-layers = <MOUSE>;
 )
-
+*/
 /* Custom behaviors */
-
+/*
 // Alt+Tab swapper, requires PR #1366
 ZMK_BEHAVIOR(swapper, tri_state,
     bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
@@ -230,7 +230,8 @@ ZMK_BEHAVIOR(win_sleep, macro,
     tap-ms = <50>;
     bindings = <&kp LG(X) &kp U &kp S>;
 )
-
+*/
+/*
 // misc aliases
 #define CANCEL      &kp K_CANCEL             // cancel caps-word, num-word and smart-mouse
 #define DSK_PREV    &hmr RSHFT LG(LC(LEFT))  // previous desktop
@@ -239,11 +240,11 @@ ZMK_BEHAVIOR(win_sleep, macro,
 #define PIN_APP     &kp LG(LC(LS(A)))        // pin application across desktops
 #define DSK_MGR     &kp LA(GRAVE)            // desktop manager
 #define VOL_DOWN    &hmr LCTRL C_VOL_DN
-
+*/
 /* Keymap */
-
+/*
 ZMK_CONDITIONAL_LAYER(FN NUM, SYS)  // FN + NUM --> SYS
-
+*/
 ZMK_COMBO(fslh,  &kp FSLH,      LM2 LB2,     DEF NAV NUM, 30)
 
 ZMK_LAYER(base,
