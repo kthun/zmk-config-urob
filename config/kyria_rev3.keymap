@@ -49,8 +49,8 @@
 
 /* Unicode characters */
 ZMK_UNICODE_PAIR(no_ae,      KP_N0, KP_N2, KP_N3, KP_N0,    KP_N0, KP_N1, KP_N9, KP_N8)
-ZMK_UNICODE_PAIR(no_ae,      KP_N0, KP_N2, KP_N3, KP_N0,    KP_N0, KP_N1, KP_N9, KP_N8)
 ZMK_UNICODE_PAIR(no_oe,      KP_N0, KP_N2, KP_N4, KP_N8,    KP_N0, KP_N2, KP_N1, KP_N6)
+ZMK_UNICODE_PAIR(no_aa,      KP_N0, KP_N2, KP_N2, KP_N9,    KP_N0, KP_N1, KP_N9, KP_N7)
 ZMK_UNICODE_SINGLE(euro,     KP_N0, KP_N1, KP_N2, KP_N8)
 
 
