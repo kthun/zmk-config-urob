@@ -215,12 +215,6 @@ ZMK_BEHAVIOR(win_sleep, macro,
     bindings = <&kp LG(X) &kp U &kp S>;
 )
 
-// Go to base layer and press escape
-ZMK_BEHAVIOR(base_esc, macro,
-    wait-ms = <0>;
-    tap-ms = <5>;
-    bindings = <&to DEF &kp ESC>;
-
 // misc aliases
 #define CANCEL      &kp K_CANCEL             // cancel caps-word, num-word and smart-mouse
 #define DSK_PREV    &hmr RSHFT LG(LC(LEFT))  // previous desktop
