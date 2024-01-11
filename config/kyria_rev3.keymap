@@ -134,6 +134,15 @@ ZMK_BEHAVIOR(num_dance, tap_dance,
     continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL>;
 };
 
+// tap: toggle nav-layer | hold: go to num-layer
+#define TO_NAV &to_nav NAV NAV
+ZMK_BEHAVIOR(to_nav, hold_tap,
+    flavor = "balanced";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <QUICK_TAP_MS>;
+    bindings = <&mo>, <&tog>;
+)
+
 // smart-mouse, requires PR #1366
 ZMK_BEHAVIOR(smart_mouse, tri_state,
     bindings = <&tog MOUSE>, <&none>, <&tog MOUSE>;
@@ -224,9 +233,9 @@ ZMK_LAYER(base_layer,
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                                                             ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
       &kp TAB     &hml LGUI A   &hml LALT R   &hml LCTRL S  &hml LSHFT T     &kp G                                                                       &kp M      &hmr RSHFT N  &hmr LCTRL E  &hmr LALT I   &hmr LGUI O     &no_oe
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┬─────────────╮     ╭─────────────┬─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-       &to 0          &kp Z         &kp X         &kp C      &lt SYM D         &kp V          ___           ___                 ___           ___       &kp K        &lt SYM H    &comma_morph  &dot_morph     &kp MINUS      &kp SQT
+       &to 0          &kp Z         &kp X         &kp C      &lt SYM D       &kp V         ___           ___                  ___           ___          &kp K       &lt SYM H    &comma_morph  &dot_morph     &kp MINUS      &kp SQT
 //╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤     ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                                 &kp LGUI      &kp DEL       &kp BKSP      &mo NAV     SMART_NUM          &lt FN RET     &spc_morph   &smart_shft    &kp TAB       &kp K_CMENU
+                                                 &kp LGUI      &kp DEL       &kp BKSP     TO_NAV       SMART_NUM          &lt FN RET     &spc_morph   &smart_shft    &kp TAB       &kp K_CMENU
 //                                          ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯     ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯
 )
 
