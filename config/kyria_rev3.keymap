@@ -151,9 +151,14 @@ ZMK_BEHAVIOR(smart_mouse, tri_state,
 /* Custom behaviors */
 
 // Alt+Tab swapper, requires PR #1366
-ZMK_BEHAVIOR(swapper, tri_state,
+ZMK_BEHAVIOR(altswapper, tri_state,
     bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
-    ignored-key-positions = <LT2>;
+    ignored-key-positions = <LT3>;
+)
+
+ZMK_BEHAVIOR(ctrlswapper, tri_state,
+    bindings = <&kt LCTL>, <&kp TAB>, <&kt LCTL>;
+    ignored-key-positions = <LT3>;
 )
 
 // reuse basic mod-morph scheme
@@ -251,7 +256,7 @@ ZMK_LAYER(sym_layer,
 
 ZMK_LAYER(nav_layer,
 //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮                                                             ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-        ___           ___           ___        &kp LS(TAB)   &swapper        ___                                                                       &kp PG_UP     NAV_BSPC       NAV_UP        NAV_DEL         ___           ___
+        ___           ___           ___        &kp LS(TAB)  &altswapper   &ctrlswapper                                                                 &kp PG_UP     NAV_BSPC       NAV_UP        NAV_DEL         ___           ___
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤                                                             ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
         ___        &kp LGUI      &kp LALT      &kp LCTRL     &kp LSHFT        ___                                                                      &kp PG_DN     NAV_LEFT      NAV_DOWN      NAV_RIGHT        ___           ___
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┬─────────────╮     ╭─────────────┬─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
