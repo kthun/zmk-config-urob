@@ -236,7 +236,7 @@ ZMK_LAYER(base_layer,
                                                  &kp LGUI      &kp DEL       &kp BKSP     &to_nav      SMART_NUM          &lt FN RET     &spc_morph   &smart_shft    &kp TAB       &kp K_CMENU
 //                                          ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯     ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯
 )
-
+/*
 ZMK_LAYER(sym_layer,
 //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮                                                             ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
         ___          &kp SQT       &kp LT        &kp GT        &kp DQT      &kp DOT                                                                      &kp AMPS     &kp COLN    &kp LBRC        &kp RBRC       &kp PRCT       ___
@@ -320,6 +320,7 @@ ZMK_LAYER(qwerty_layer,
                                                &kp LSFT      &kp LCTL       &kp LALT       &kp SPC     &kp ENTER           &kp ENTER     &kp SPC       &kp RALT      &kp RCTL      &kp RSFT
 //                                          ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯     ╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯
 )
+*/
 
 /*
 ZMK_LAYER(blank,
