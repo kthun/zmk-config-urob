@@ -153,12 +153,12 @@ ZMK_BEHAVIOR(smart_mouse, tri_state,
 // Alt+Tab swapper, requires PR #1366
 ZMK_BEHAVIOR(altswapper, tri_state,
     bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
-    ignored-key-positions = <LT3>;
+    ignored-key-positions = <LT2>;
 )
 
 ZMK_BEHAVIOR(ctrlswapper, tri_state,
     bindings = <&kt LCTL>, <&kp TAB>, <&kt LCTL>;
-    ignored-key-positions = <LT3>;
+    ignored-key-positions = <LT2>;
 )
 
 // reuse basic mod-morph scheme
