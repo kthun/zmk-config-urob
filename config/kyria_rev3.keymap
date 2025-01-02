@@ -1,6 +1,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#define  CONFIG_WIRELESS 1
+#define  CONFIG_WIRELESS
 
 #if CONFIG_WIRELESS
     #include <dt-bindings/zmk/bt.h>
