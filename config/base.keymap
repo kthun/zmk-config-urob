@@ -45,6 +45,13 @@
   quick-tap-ms = <QUICK_TAP_MS>;
 };
 
+/* Unicode characters */
+ZMK_UNICODE_PAIR(no_ae,      KP_N0, KP_N2, KP_N3, KP_N0,    KP_N0, KP_N1, KP_N9, KP_N8)
+ZMK_UNICODE_PAIR(no_oe,      KP_N0, KP_N2, KP_N4, KP_N8,    KP_N0, KP_N2, KP_N1, KP_N6)
+ZMK_UNICODE_PAIR(no_aa,      KP_N0, KP_N2, KP_N2, KP_N9,    KP_N0, KP_N1, KP_N9, KP_N7)
+ZMK_UNICODE_SINGLE(euro,     KP_N0, KP_N1, KP_N2, KP_N8)
+
+
 /* Homerow mods */
 
 #define KEYS_L LT0 LT1 LT2 LT3 LT4 LM0 LM1 LM2 LM3 LM4 LB0 LB1 LB2 LB3 LB4
@@ -187,7 +194,7 @@ ZMK_CONDITIONAL_LAYER(sys, FN NUM, SYS) // FN + NUM --> SYS.
 
 ZMK_BASE_LAYER(base,
 //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-    &kp Q         &kp W         &kp F         &kp P         &kp B       ,   &kp J         &kp L         &kp U         &kp Y         &kp SQT     ,
+    &kp Q         &kp W         &kp F         &kp P         &kp B       ,   &kp J         &kp L         &kp U         &kp Y         &no_aa      ,
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
     &hml LGUI A   &hml LALT R   &hml LSHFT S  &hml LCTRL T  &kp G       ,   &kp M         &hmr LCTRL N  &hmr RSHFT E  &hmr LALT I   &hmr LGUI O ,
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
