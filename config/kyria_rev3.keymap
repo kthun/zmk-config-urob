@@ -7,6 +7,14 @@
                         &none   LB  &none   &none       &none   &none   RB  &none                   \
         &none   &none   &none   LH                                      RH  &none   &none   &none   \
     )
+#define ZMK_ADDITIONAL_LAYER(name, LT, RT, LM, RM, LB, RB, LH, RH)                                        \
+    ZMK_LAYER(                                                                                      \
+        name,                                                                                       \
+                        &none   LT                                      RT  &none                   \
+                        &none   LM                                      RM  &none                   \
+                        &none   LB  &none   &none       &none   &none   RB  &none                   \
+        &none   &none   &none   LH                                      RH  &none   &none   &none   \
+    )
 
 #include "zmk-helpers/key-labels/kyria.h"
 #include "base.keymap"
