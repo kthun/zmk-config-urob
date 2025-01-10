@@ -14,6 +14,8 @@
 #include "zmk-helpers/unicode-chars/greek.dtsi"
 #include "zmk-helpers/unicode-chars/german.dtsi"
 
+#define HOST_OS 2
+
 #define DEF 0
 #define NAV 1
 #define FN 2
