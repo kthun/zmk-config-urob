@@ -15,14 +15,6 @@
                         &none   LB  &none   &none       &none   &none   RB  &none                   \
         &none   &none   &none   LH                                      RH  &none   &none   &none   \
     )
-#define ZMK_QWERTY_LAYER(name, LT, RT, LM, RM, LB, RB, LH, RH)                                      \
-    ZMK_LAYER(                                                                                      \
-        name,                                                                                       \
-                            &kp ESC     LT                                      RT  &no_ae                  \
-                            &kp TAB     LM                                      RM  &no_oe                  \
-                            &kp LSHFT   LB  &none   &none       &none   &none   RB  &kp SQT                   \
-        &kp LGUI   &kp DEL  &kp BKSP    LH                                      RH  &none   &kp TAB   &kp C_MENU   \
-    )
 
 #include "zmk-helpers/key-labels/kyria.h"
 #include "base.keymap"
