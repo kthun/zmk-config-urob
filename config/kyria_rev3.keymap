@@ -1,20 +1,12 @@
 #define CONFIG_WIRELESS
-#define ZMK_BASE_LAYER(name, LT, RT, LM, RM, LB, RB, LH, RH)                                                                \
-    ZMK_LAYER(                                                                                                              \
-        name,                                                                                                               \
-                            &kp ESC     LT                                              RT  &no_ae                          \
-                            &kp TAB     LM                                              RM  &no_oe                          \
-                            &kp LSHFT   LB  &to 0   ---         &to QWERTY  &kp BKSP    RB  &kp SQT                         \
-     &kp LGUI   &kp DEL     &kp BKSP    LH                                              RH  &smart_shft &kp TAB &kp C_MENU  \
+#define ZMK_BASE_LAYER(name, LT, RT, LM, RM, LB, RB, LH, RH)                                                                    \
+    ZMK_LAYER(                                                                                                                  \
+        name,                                                                                                                   \
+                            &kp ESC     LT                                              RT  &no_ae                              \
+                            &kp TAB     LM                                              RM  &no_oe                              \
+                            &kp LSHFT   LB  &to 0   ---         &to QWERTY  &kp BKSP    RB  &kp SQT                             \
+        &kp LGUI    &kp DEL &kp BKSP    LH                                              RH  &smart_shft   &kp TAB   &kp C_MENU  \
     )
 
-#define ZMK_EXTRA_LAYER(name, LT, RT, LM, RM, LB, RB, LH, RH)                                                               \
-    ZMK_LAYER(                                                                                                              \
-        name,                                                                                                               \
-                            &kp ESC     LT                                              RT  ---                             \
-                            &kp TAB     LM                                              RM  ---                             \
-                            &kp LSHFT   LB  &to 0   ---         &to QWERTY  &kp BKSP    RB  ---                             \
-     &kp LGUI   &kp DEL     &kp BKSP    LH                                              RH  &smart_shft &kp TAB &kp C_MENU  \
-    )
 #include "zmk-helpers/key-labels/kyria.h"
 #include "base.keymap"
