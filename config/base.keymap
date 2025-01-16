@@ -181,8 +181,9 @@ ZMK_TAP_DANCE(copy_cut, bindings = <&kp LC(INS)>, <&kp LC(X)>;
 // Sticky shift + leader.
 ZMK_MACRO(leader_sft, bindings = <&sk LSHFT &leader>;)
 
-// Tap: toggle nav layer | double-tap: go to nav layer
-ZMK_HOLD_TAP(ht_nav, bindings = <&mo NAV>, <&tog NAV>;)
+// Tap: nav layer | double-tap: go to nav layer
+ZMK_HOLD_TAP(ht_nav, bindings = <&mo NAV>, <&tog NAV>; flavor = "balanced";
+             tapping-term-ms = <200>; quick-tap-ms = <QUICK_TAP_MS>;)
 
 // Misc aliases. [TODO: clean up]
 #define CANCEL    &kp K_CANCEL            // Cancel caps-word & auto-layers.
