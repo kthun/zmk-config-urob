@@ -2,34 +2,34 @@
 #define ZMK_BASE_LAYER(name, LT, RT, LM, RM, LB, RB, LH, RH)                                        \
     ZMK_LAYER(                                                                                      \
         name,                                                                                       \
-                            &kp ESC     LT                                      RT  &no_ae                  \
-                            &kp TAB     LM                                      RM  &no_oe                  \
-                            &kp LSHFT   LB  &none   &none       &none   &none   RB  &kp SQT                   \
-        &kp LGUI   &kp DEL  &kp BKSP    LH                                      RH  &none   &kp TAB   &kp C_MENU   \
+                            &kp ESC     LT                                      RT  &no_ae          \
+                            &kp TAB     LM                                      RM  &no_oe          \
+                            &kp LSHFT   LB  &none   &none       &none   &none   RB  &kp SQT         \
+        &kp LGUI   &kp DEL  &kp BKSP    LH                                      RH  &trans  &kp TAB   &kp C_MENU   \
     )
-#define ZMK_ADDITIONAL_LAYER(name, LT, RT, LM, RM, LB, RB, LH, RH)                                        \
+#define ZMK_ADDITIONAL_LAYER(name, LT, RT, LM, RM, LB, RB, LH, RH)                                  \
     ZMK_LAYER(                                                                                      \
         name,                                                                                       \
-                        &none   LT                                      RT  &none                   \
-                        &none   LM                                      RM  &none                   \
-                        &none   LB  &none   &none       &none   &none   RB  &none                   \
-        &none   &none   &none   LH                                      RH  &none   &none   &none   \
+                        &trans  LT                                      RT  &trans                  \
+                        &trans  LM                                      RM  &trans                  \
+                        &trans  LB  &trans  &trans      &trans  &trans  RB  &trans                  \
+        &trans  &trans  &trans  LH                                      RH  &trans  &trans  &trans  \
     )
-#define ZMK_QWERTY_LAYER(name, LT, RT, LM, RM, LB, RB, LH, RH)                                        \
+#define ZMK_QWERTY_LAYER(name, LT, RT, LM, RM, LB, RB, LH, RH)                                      \
     ZMK_LAYER(                                                                                      \
         name,                                                                                       \
-                        &none   LT                                      RT  &none                   \
-                        &none   LM                                      RM  &none                   \
-                        &none   LB  &none   &none       &none   &none   RB  &none                   \
-        &none   &none   &none   LH                                      RH  &none   &none   &none   \
+                        &trans  LT                                      RT  &trans                  \
+                        &trans  LM                                      RM  &trans                  \
+                        &trans  LB  &trans  &trans      &trans  &trans  RB  &trans                  \
+        &trans  &trans  &trans  LH                                      RH  &trans  &trans  &trans  \
     )
-#define ZMK_SYMBOLS_LAYER(name, LT, RT, LM, RM, LB, RB, LH, RH)                                        \
+#define ZMK_SYMBOLS_LAYER(name, LT, RT, LM, RM, LB, RB, LH, RH)                                     \
     ZMK_LAYER(                                                                                      \
         name,                                                                                       \
-                        &none   LT                                      RT  &none                   \
-                        &none   LM                                      RM  &none                   \
-                        &none   LB  &none   &none       &none   &none   RB  &none                   \
-        &none   &none   &none   LH                                      RH  &none   &none   &none   \
+                        &trans  LT                                      RT  &trans                  \
+                        &trans  LM                                      RM  &trans                  \
+                        &trans  LB  &trans  &trans      &trans  &trans  RB  &trans                  \
+        &trans  &trans  &trans  LH                                      RH  &trans  &trans  &trans  \
     )
 #include "zmk-helpers/key-labels/kyria.h"
 #include "base.keymap"
