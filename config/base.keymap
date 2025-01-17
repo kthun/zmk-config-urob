@@ -183,8 +183,8 @@ ZMK_MACRO(leader_sft, bindings = <&sk LSHFT &leader>;)
 
 // Tap: nav layer | double-tap: go to nav layer
 #define NAV_TAP &layer_hold_tap NAV NAV
-ZMK_TAP_DANCE(layer_hold_tap, bindings = <&mo>, <&tog>; flavor = "balanced";
-             tapping-term-ms = <200>; quick-tap-ms = <QUICK_TAP_MS>;)
+ZMK_TAP_DANCE(layer_hold_tap, bindings = <&mo>, <&tog>;
+             tapping-term-ms = <200>;)
 
 // Misc aliases. [TODO: clean up]
 #define CANCEL    &kp K_CANCEL            // Cancel caps-word & auto-layers.
