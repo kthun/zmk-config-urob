@@ -182,8 +182,7 @@ ZMK_TAP_DANCE(copy_cut, bindings = <&kp LC(INS)>, <&kp LC(X)>;
 ZMK_MACRO(leader_sft, bindings = <&sk LSHFT &leader>;)
 
 // Tap: nav layer | double-tap: go to nav layer
-#define NAV_TAP &layer_hold_tap NAV NAV
-ZMK_TAP_DANCE(layer_hold_tap, bindings = <&mo>, <&tog>;
+ZMK_TAP_DANCE(nav_tap, bindings = <&mo NAV>, <&tog NAV>;
              tapping-term-ms = <200>;)
 
 // Misc aliases. [TODO: clean up]
@@ -207,7 +206,7 @@ ZMK_BASE_LAYER(base,
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
     &kp Z         &kp X         &kp C         &lt SYM D     &kp V       ,   &kp K         &lt SYM H     &comma_morph  &dot_morph    &qexcl      ,
 //╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯
-                                               NAV_TAP      SMART_NUM   ,   &lt FN RET    &lt_spc NAV 0
+                                               &nav_tap      SMART_NUM   ,   &lt FN RET    &lt_spc NAV 0
 //                                          ╰─────────────┴─────────────╯ ╰─────────────┴─────────────╯
 )
 
