@@ -5,7 +5,7 @@
                             &kp ESC     LT                                      RT  &no_ae          \
                             &kp TAB     LM                                      RM  &no_oe          \
                             &kp LSHFT   LB  &none   &none       &none   &none   RB  &kp SQT         \
-        &kp LGUI   &kp DEL  &kp BKSP    LH                                      RH  &trans  &kp TAB   &kp C_MENU   \
+        &kp LGUI   &kp DEL  &kp BKSP    LH                                      RH  &smart_shft  &kp TAB   &kp C_MENU   \
     )
 #define ZMK_ADDITIONAL_LAYER(name, LT, RT, LM, RM, LB, RB, LH, RH)                                  \
     ZMK_LAYER(                                                                                      \
